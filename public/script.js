@@ -1,9 +1,9 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const chatDisplay = document.getElementById('chatDisplay');
-    const messageInput = document.getElementById('messageInput');
-    const sendButton = document.getElementById('sendButton');
+    const chatDisplay = document.getElementById('chat-display');
+    const messageInput = document.getElementById('message-input');
+    const sendButton = document.getElementById('send-button');
 
-    sendButton.addEventListener('click', sendMessage);
+ sendButton.addEventListener('click', sendMessage);
     messageInput.addEventListener('keypress', (event) => {
         if (event.key === 'Enter') {
             sendMessage();
