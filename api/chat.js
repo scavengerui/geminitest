@@ -5,6 +5,8 @@ module.exports = async (req, res) => {
     return res.status(405).send('Method Not Allowed');
   }
 
+  const apiKey = "AIzaSyCT5ullmG36QYE6In2qXbs_u2H5bXOqt6A";
+
   if (!apiKey) {
     return res.status(500).json({ error: 'Gemini API key not configured' });
   }
@@ -464,8 +466,6 @@ module.exports = async (req, res) => {
   if (!message) {
     return res.status(400).json({ error: 'Message is required' });
   }
-
-  const apiKey = "AIzaSyCT5ullmG36QYE6In2qXbs_u2H5bXOqt6A";
 
   const systemPrompt = `You are an attendance and timetable assistant for a university student portal.
 You ONLY answer questions related to the timetable, attendance percentage, and attendance predictions.
