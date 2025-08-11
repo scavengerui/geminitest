@@ -5,7 +5,7 @@ module.exports = async (req, res) => {
     return res.status(405).send('Method Not Allowed');
   }
 
-  const apiKey = "AIzaSyCT5ullmG36QYE6In2qXbs_u2H5bXOqt6A";
+  const apiKey = "AIzaSyBWkhNKnZkh3_A6ISmQIUA8j_Om2bTfzkA";
 
   if (!apiKey) {
     return res.status(500).json({ error: 'Gemini API key not configured' });
@@ -510,6 +510,6 @@ ${JSON.stringify(attendance, null, 2)}
     res.status(200).json({ reply: text });
   } catch (error) {
     console.error("Error communicating with Gemini API:", error);
-    res.status(500).json({ error: 'Error communicating with the AI model' });
+    res.status(500).json({ error: 'Error communicating with the AI model', details: error.message });
   }
 };
