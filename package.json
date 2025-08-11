@@ -1,0 +1,17 @@
+{
+  "name": "vercel-gemini-chatbot",
+  "version": "1.0.0",
+  "description": "Minimal chatbot using Vercel and Gemini API",
+  "main": "api/chat.js",
+  "dependencies": {
+    "@google/generative-ai": "^0.1.2"
+  },
+  "keywords": [
+    "vercel",
+    "gemini",
+    "chatbot",
+    "serverless"
+  ],
+  "author": "Your Name",
+  "license": "MIT"
+}
